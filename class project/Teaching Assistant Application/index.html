@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teaching Assistant Application</title>
+    <link rel="Shortcut icon" href="img/aum_favicon_2019.jpg">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="top"></div>
+        <div class="log">
+            <div class="left"></div>
+            <div class="right">
+                <form>
+                    <input type="text">
+                </form>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu_list">
+                <ul>
+                    <li><a href="#"><strong>AUM Overview</strong></a></li>
+                    <li><a href="#"><strong>Academics</strong></a></li>
+                    <li><a href="#"><strong>Admissions</strong></a></li>
+                    <li><a href="#"><strong>Student Affairs</strong></a></li>
+                    <li><a href="#"><strong>Alumni and Giving</strong></a></li>
+                    <li><a href="#"><strong>Athletics</strong></a></li>
+                    <li><a href="#"><strong>Give</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+        <form name="myform" action="survey_data.html" method="get">
+			  Student's full name：<input type="text" name="fullname"/><br/>
+			  ID：<input type="text" name="ID number"/><br/>
+              Gender：Male<input type="radio" name="sex" id="sex" value="male" checked="checked"/>
+				      Female<input type="radio" name="sex" id="sex" value="female"/><br/>
+              GPA：<input type="text" name="GPA" oninput = "clearNoNum(this)"/><br/>
+              Submission Date：<input type="date" name="date" value="2020-12-31"/><br/>
+			  Comments：<br/>
+			  <textarea name="comments" cols="50" rows="10"></textarea><br/><br/>
+			  <input type="submit"/>
+		</form>
+    
+    <div class="footer">
+        <div class="footer_content">
+            <p>Copyright © 2020 · Shuwen Zhou</p>
+        </div>
+    </div>
+</body>
+</html>

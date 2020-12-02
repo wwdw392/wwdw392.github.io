@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPA calculate</title>
+    <link rel="Shortcut icon" href="img/aum_favicon_2019.jpg">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="top"></div>
+        <div class="log">
+            <div class="left"></div>
+            <div class="right">
+                <form>
+                    <input type="text">
+                </form>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu_list">
+                <ul>
+                    <li><a href="#"><strong>AUM Overview</strong></a></li>
+                    <li><a href="#"><strong>Academics</strong></a></li>
+                    <li><a href="#"><strong>Admissions</strong></a></li>
+                    <li><a href="#"><strong>Student Affairs</strong></a></li>
+                    <li><a href="#"><strong>Alumni and Giving</strong></a></li>
+                    <li><a href="#"><strong>Athletics</strong></a></li>
+                    <li><a href="#"><strong>Give</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>GAP calculator</h1>
+        <h1>Course 1:</h1>
+        <div>
+            Credit hours:
+            <input type="text">
+            Grade:
+            <select>
+                <option value="4.0">A</option>
+                <option value="3.0">B</option>
+                <option value="2.0">C</option>
+                <option value="1.0">D</option>
+                <option value="0.0">F</option>
+            </select>
+        </div>
+        <h1>Course 2:</h1>
+        <div>
+            Credit hours:
+            <input type="text">
+            Grade:
+            <select>
+                <option value="4.0">A</option>
+                <option value="3.0">B</option>
+                <option value="2.0">C</option>
+                <option value="1.0">D</option>
+                <option value="0.0">F</option>
+            </select>
+        </div>
+        <button onclick="submit()">Submit</button>
+        <div id="text"></div>
+    </div>
+    <script>
+        var select = document.getElementsByTagName("select");
+        var input = document.getElementsByTagName("input");
+        var text=document.getElementById('text')
+        function submit() {
+            allVal = parseFloat(input[1].value * select[0].value) + parseFloat(input[2].value * select[1].value)
+            ava=allVal/(parseFloat(input[1].value) + parseFloat(input[2].value))
+            text.style.display="block"
+            text.innerHTML="The avarage GPA is:"+ava.toFixed(2)
+            console.log(ava)
+        }
+    </script>
+    
+    <div class="footer">
+        <div class="footer_content">
+            <p>Copyright © 2020 · Shuwen Zhou</p>
+        </div>
+    </div>
+</body>
+</html>
